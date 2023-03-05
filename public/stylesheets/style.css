@@ -1,0 +1,16 @@
+main {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1em;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4 {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	/* flex-grow: 0; */
+	/* width: 33%; */
+}

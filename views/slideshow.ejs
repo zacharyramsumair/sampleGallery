@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>galleria</title>
+		<link rel="stylesheet" href="./stylesheets/reset.css" />
+		<link rel="stylesheet" href="./stylesheets/slideshow.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<nav>
+			<span class="brandName">galleria.</span>
+			<span class="stop">Stop Slideshow</span>
+		</nav>
+
+		<main class="slide"></main>
+
+		<footer>
+			<div class="names">
+				<span class="artName">Art Name <%= MobileData[0].ArtName %> </span>
+				<span class="artistName">Artist Name</span>
+			</div>
+
+			<div class="controlButtons">
+				<i class="fa-regular fa-square-caret-left back buttonFaded"></i>
+				<i class="fa-regular fa-square-caret-right front"></i>
+			</div>
+		</footer>
+	</body>
+	<script src="./javascripts/MobileData.js"></script>
+	<script src="./javascripts/slideContent.js"></script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>galleria</title>
+		<link rel="stylesheet" href="./stylesheets/reset.css" />
+		<link rel="stylesheet" href="./stylesheets/index.css" />
+		<link rel="stylesheet" href="./stylesheets/lightbox.css" />
+	</head>
+	<body>
+		<!-- <img src="./images/arnolfini protrait.jpg" alt="" /> -->
+		<!-- <%= MobileData[0]["ArtName"]%> -->
+
+		<nav>
+			<span class="brandName">galleria.</span>
+			<span class="start">Start Slideshow</span>
+		</nav>
+
+		<main class="mobile-images">
+			<% for(let data of MobileData) { %>
+			<div class="mobileData">
+				<img class="mobile-image" src="<%= data.Image %> " alt="" />
+				<div class="mobile-ArtData">
+					<h2 class="mobile-ArtName"><%=data.ArtName%></h2>
+					<h2 class="mobile-ArtistName"><%=data.ArtistName%></h2>
+				</div>
+			</div>
+			<% } %>
+		</main>
+
+		<main class="desktop-images">
+			<div class="col-1">
+				<% for (let i = 0; i < 4; i++) { %>
+				<div class="desktopData">
+					<img
+						class="desktop-image"
+						src="<%= DesktopData[i].Image %> "
+						alt=""
+					/>
+					<div class="desktop-ArtData">
+						<h2 class="desktop-ArtName">
+							<%=DesktopData[i].ArtName%>
+						</h2>
+						<h2 class="desktop-ArtistName">
+							<%=DesktopData[i].ArtistName%>
+						</h2>
+					</div>
+				</div>
+				<% } %>
+			</div>
+			<div class="col-2">
+				<% for (let i = 4; i < 8; i++) { %>
+				<div class="desktopData">
+					<img
+						class="desktop-image"
+						src="<%= DesktopData[i].Image %> "
+						alt=""
+					/>
+					<div class="desktop-ArtData">
+						<h2 class="desktop-ArtName">
+							<%=DesktopData[i].ArtName%>
+						</h2>
+						<h2 class="desktop-ArtistName">
+							<%=DesktopData[i].ArtistName%>
+						</h2>
+					</div>
+				</div>
+				<% } %>
+			</div>
+			<div class="col-3">
+				<% for (let i = 8; i < 11; i++) { %>
+				<div class="desktopData">
+					<img
+						class="desktop-image"
+						src="<%= DesktopData[i].Image %> "
+						alt=""
+					/>
+					<div class="desktop-ArtData">
+						<h2 class="desktop-ArtName">
+							<%=DesktopData[i].ArtName%>
+						</h2>
+						<h2 class="desktop-ArtistName">
+							<%=DesktopData[i].ArtistName%>
+						</h2>
+					</div>
+				</div>
+				<% } %>
+			</div>
+			<div class="col-4">
+				<% for (let i = 11; i < 16; i++) { %>
+				<div class="desktopData">
+					<img
+						class="desktop-image"
+						src="<%= DesktopData[i].Image %> "
+						alt=""
+					/>
+					<div class="desktop-ArtData">
+						<h2 class="desktop-ArtName">
+							<%=DesktopData[i].ArtName%>
+						</h2>
+						<h2 class="desktop-ArtistName">
+							<%=DesktopData[i].ArtistName%>
+						</h2>
+					</div>
+				</div>
+				<% } %>
+			</div>
+		</main>
+	</body>
+
+	<script src="./javascripts/fixlayout.js"></script>
+	<script src="./javascripts/lightbox.js"></script>
+</html>

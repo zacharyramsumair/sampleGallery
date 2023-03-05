@@ -1,0 +1,163 @@
+body {
+	/* margin: 0 1em; */
+}
+nav {
+	display: flex;
+	justify-content: space-around;
+	padding: 2em;
+	position: relative;
+	margin: 0 2em;
+	border-bottom: #a7a7a7 1px solid;
+}
+
+.brandName {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin: 0 1em;
+}
+
+.start {
+	display: flex;
+	text-transform: uppercase;
+	color: #a7a7a7;
+	align-items: center;
+	margin: 0 1em;
+	text-align: center;
+}
+
+.mobileData {
+	position: relative;
+}
+
+.mobile-images {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+}
+
+.mobile-image {
+	flex-grow: 0;
+	flex-shrink: 0;
+	min-width: 300px; /* you can use % */
+	max-width: 500px; /* you can use % */
+	height: auto;
+}
+
+.mobile-ArtData,
+.desktop-ArtData {
+	position: absolute;
+	left: 1em;
+	bottom: 1.5em;
+	line-height: 1.5;
+
+	/* background-image: linear-gradient(to bottom right, red, yellow); */
+}
+.mobile-ArtName {
+	font-size: 2rem;
+	color: white;
+	/* -webkit-text-stroke: 0.5px rgb(0, 0, 0, 0.5); */
+	filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+		drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.mobile-ArtistName {
+	font-size: 1.5rem;
+	color: #a7a7a7;
+	/* -webkit-text-stroke: 0.5px rgb(0, 0, 0, 0.3); */
+	filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+		drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.desktop-images {
+	display: none;
+}
+
+@media (min-width: 1250px) {
+	nav {
+		display: flex;
+		justify-content: space-between;
+		padding: 2em;
+		position: relative;
+		margin: 0 2em;
+		border-bottom: #a7a7a7 1px solid;
+	}
+
+	.mobile-images {
+		display: none;
+	}
+
+	.desktop-images {
+		display: grid;
+		grid-template-columns: repeat(4, 300px);
+		grid-template-areas: "col1 col2 col3 col4";
+		/* gap: 1em; */
+		margin: 0 auto;
+		margin-bottom: 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-content: space-between;
+		justify-content: space-evenly;
+		cursor: pointer;
+	}
+
+	.col-1,
+	.col-2,
+	.col-3,
+	.col-4 {
+		/* margin: 2em 0; */
+		margin-top: 1.5em;
+		margin-bottom: 0;
+	}
+
+	.col-1 {
+		grid-area: col1;
+	}
+	.col-2 {
+		grid-area: col2;
+	}
+	.col-3 {
+		grid-area: col3;
+	}
+	.col-4 {
+		grid-area: col4;
+	}
+
+	.desktopData {
+		position: relative;
+		margin: 2em 0;
+	}
+
+	.desktop-ArtData {
+		position: absolute;
+	}
+
+	.vanGoghPosition {
+		margin: 3em 0;
+	}
+
+	.disappear {
+		display: none;
+	}
+
+	.desktop-ArtName {
+		font-size: 1.5rem;
+		color: white;
+		/* -webkit-text-stroke: 0.5px rgb(0, 0, 0, 0.5); */
+		filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+			drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+	}
+
+	.desktop-ArtistName {
+		font-size: 1rem;
+		color: #a7a7a7;
+		/* -webkit-text-stroke: 0.5px rgb(0, 0, 0, 0.3); */
+		filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+			drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+	}
+
+	img {
+		max-width: 300px;
+	}
+}
